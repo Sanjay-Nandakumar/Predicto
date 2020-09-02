@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSS Responsive Table Layout</title>
+  {% load static %}  
+<link href="{% static 'assets/css/style.css'%}" rel="stylesheet">  
+<link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'%}" rel="stylesheet"> 
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<p  style="color:white; text-align: center;">  <b>Your prediction report for has been downloaded successfully. Kindly check the download path in your computer.</b></p>
+<p  style="color:white; text-align: center;">  <b> {{ class0 }} is denoted as 0 and {{ class1 }} is denoted as 1 in the downloaded prediction report</b></p>
+<p  style="color:white; text-align: center;">  <b> {{max}} is the best model for your data according to F1 Score</b></p>
+
+<div class="wrapper">
+  
+  <div class="table">
+    
+    <div class="row header">
+      <div class="cell">
+        Decision Tree classification
+      </div>
+      <div class="cell"> 
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        Accuracy
+      </div>
+      <div class="cell" data-title="Age">
+          {{ dAccuracy}}
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        Precision
+      </div>
+      <div class="cell" data-title="Age">
+        {{ dPrecision}}
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        Recall
+      </div>
+      <div class="cell" data-title="Age">
+        {{ dRecall }}
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="cell" data-title="Name">
+          F1 Score
+        </div>
+        <div class="cell" data-title="Age">
+          {{ dF1score }}
+        </div>
+      </div>
+    
+
+      </div>
+        
+    
+
+
+
+    <div class="table">
+    
+        <div class="row header blue">
+          <div class="cell">
+            Logistic regression
+          </div>
+          <div class="cell"> 
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="cell" data-title="Name">
+              Accuracy
+            </div>
+            <div class="cell" data-title="Age">
+                {{ lAccuracy}}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="cell" data-title="Name">
+              Precision
+            </div>
+            <div class="cell" data-title="Age">
+              {{ lPrecision}}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="cell" data-title="Name">
+              Recall
+            </div>
+            <div class="cell" data-title="Age">
+              {{ lRecall }}
+            </div>
+          </div>
+      
+          <div class="row">
+              <div class="cell" data-title="Name">
+                F1 Score
+              </div>
+              <div class="cell" data-title="Age">
+                {{ lF1score }}
+              </div>
+            </div>
+          
+
+        </div>
+
+
+      
+    <div class="table">
+    
+        <div class="row header yellow">
+          <div class="cell">
+            XG Boost classification
+          </div>
+          <div class="cell"> 
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="cell" data-title="Name">
+              Accuracy
+            </div>
+            <div class="cell" data-title="Age">
+                {{ xAccuracy}}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="cell" data-title="Name">
+              Precision
+            </div>
+            <div class="cell" data-title="Age">
+              {{ xPrecision}}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="cell" data-title="Name">
+              Recall
+            </div>
+            <div class="cell" data-title="Age">
+              {{ xRecall }}
+            </div>
+          </div>
+      
+          <div class="row">
+              <div class="cell" data-title="Name">
+                F1 Score
+              </div>
+              <div class="cell" data-title="Age">
+                {{ xF1score }}
+              </div>
+            </div>
+          
+        </div>
+
+
+        
+
+            <div class="table">
+    
+                <div class="row header green">
+                  <div class="cell">
+                    Random Forest classification
+                  </div>
+                  <div class="cell"> 
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="cell" data-title="Name">
+                      Accuracy
+                    </div>
+                    <div class="cell" data-title="Age">
+                        {{ rAccuracy}}
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="cell" data-title="Name">
+                      Precision
+                    </div>
+                    <div class="cell" data-title="Age">
+                      {{ rPrecision}}
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="cell" data-title="Name">
+                      Recall
+                    </div>
+                    <div class="cell" data-title="Age">
+                      {{ rRecall }}
+                    </div>
+                  </div>
+              
+                  <div class="row">
+                      <div class="cell" data-title="Name">
+                        F1 Score
+                      </div>
+                      <div class="cell" data-title="Age">
+                        {{ rF1score }}
+                      </div>
+                    </div>
+                  
+ 
+            
+                </div>
+
+                
+
+      <div class="table">
+    
+          <div class="row header green">
+            <div class="cell">
+              Support vector machine
+            </div>
+            <div class="cell"> 
+              </div>
+          </div>
+          
+          <div class="row">
+              <div class="cell" data-title="Name">
+                Accuracy
+              </div>
+              <div class="cell" data-title="Age">
+                  &#09; {{ sAccuracy}}
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="cell" data-title="Name">
+                Precision
+              </div>
+              <div class="cell" data-title="Age">
+                  &#09;  {{ sPrecision}}
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="cell" data-title="Name">
+                Recall
+              </div>
+              <div class="cell" data-title="Age">
+                  &#09;  {{ sRecall }}
+              </div>
+            </div>
+        
+            <div class="row">
+                <div class="cell" data-title="Name">
+                  F1 Score
+                </div>
+                <div class="cell" data-title="Age">
+                    &#09;  {{ sF1score }}
+                </div>
+              </div>
+            
+
+      
+          </div>
+  
+
+            
+          <div class="table">
+    
+              <div class="row header green">
+                <div class="cell">
+                  KNN classification
+                </div>
+                <div class="cell"> 
+                  </div>
+              </div>
+              
+              <div class="row">
+                  <div class="cell" data-title="Name">
+                    Accuracy
+                  </div>
+                  <div class="cell" data-title="Age">
+                      &#09; {{ kAccuracy}}
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Name">
+                    Precision
+                  </div>
+                  <div class="cell" data-title="Age">
+                      &#09;  {{ kPrecision}}
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="cell" data-title="Name">
+                    Recall
+                  </div>
+                  <div class="cell" data-title="Age">
+                      &#09;  {{ kRecall }}
+                  </div>
+                </div>
+            
+                <div class="row">
+                    <div class="cell" data-title="Name">
+                      F1 Score
+                    </div>
+                    <div class="cell" data-title="Age">
+                        &#09;  {{ kF1score }}
+                    </div>
+                  </div>
+                
+              </div>
+      
+           
+              
+</div>
+      
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>

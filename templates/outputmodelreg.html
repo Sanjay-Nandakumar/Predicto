@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSS Responsive Table Layout</title>
+  {% load static %}  
+<link href="{% static 'assets/css/style.css'%}" rel="stylesheet">  
+<link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'%}" rel="stylesheet"> 
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<p  style="color:white; text-align: center;"> <b>Your prediction report for has been downloaded successfully. Kindly check the download path in your computer.</b></p>
+<p  style="color:white; text-align: center;">  <b> {{max}} is the best model for your data according to Adjusted R Squared value</b></p>
+<div class="wrapper">
+  
+  <div class="table">
+    
+    <div class="row header">
+      <div class="cell">
+        Random Forest Regression
+      </div>
+      <div class="cell"> 
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        R Sqaured
+      </div>
+      <div class="cell" data-title="Age">
+          {{ rRSquared }}
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        Adjusted R Sqaured
+      </div>
+      <div class="cell" data-title="Age">
+        {{ rAdjRSQuared }}
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Name">
+        Mean Absolute Error
+      </div>
+      <div class="cell" data-title="Age">
+        {{ rMAE }}
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="cell" data-title="Name">
+          Mean Squared Error
+        </div>
+        <div class="cell" data-title="Age">
+          {{ rMSE }}
+        </div>
+      </div>
+    
+      <div class="row">
+          <div class="cell" data-title="Name">
+             Root Mean Squared Error
+          </div>
+          <div class="cell" data-title="Age">
+            {{ rRMSE }}
+          </div>
+        </div>
+      </div>
+        
+    
+
+
+
+    <div class="table">
+    
+        <div class="row header blue">
+          <div class="cell">
+            Decision tree Regression
+          </div>
+          <div class="cell"> 
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="cell" data-title="Name">
+              R Sqaured
+            </div>
+            <div class="cell" data-title="Age">
+                {{ dRSquared }}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="cell" data-title="Name">
+              Adjusted R Sqaured
+            </div>
+            <div class="cell" data-title="Age">
+              {{ dAdjRSQuared }}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="cell" data-title="Name">
+              Mean Absolute Error
+            </div>
+            <div class="cell" data-title="Age">
+              {{ dMAE }}
+            </div>
+          </div>
+      
+          <div class="row">
+              <div class="cell" data-title="Name">
+                Mean Squared Error
+              </div>
+              <div class="cell" data-title="Age">
+                {{ dMSE }}
+              </div>
+            </div>
+          
+            <div class="row">
+                <div class="cell" data-title="Name">
+                   Root Mean Squared Error
+                </div>
+                <div class="cell" data-title="Age">
+                  {{ dRMSE }}
+                </div>
+              </div>
+    
+        </div>
+
+
+      
+    <div class="table">
+    
+        <div class="row header yellow">
+          <div class="cell">
+            Support Vector Regression
+          </div>
+          <div class="cell"> 
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="cell" data-title="Name">
+              R Sqaured
+            </div>
+            <div class="cell" data-title="Age">
+                {{ sRSquared }}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="cell" data-title="Name">
+              Adjusted R Sqaured
+            </div>
+            <div class="cell" data-title="Age">
+              {{ sAdjRSQuared }}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="cell" data-title="Name">
+              Mean Absolute Error
+            </div>
+            <div class="cell" data-title="Age">
+              {{ sMAE }}
+            </div>
+          </div>
+      
+          <div class="row">
+              <div class="cell" data-title="Name">
+                Mean Squared Error
+              </div>
+              <div class="cell" data-title="Age">
+                {{ sMSE }}
+              </div>
+            </div>
+          
+            <div class="row">
+                <div class="cell" data-title="Name">
+                   Root Mean Squared Error
+                </div>
+                <div class="cell" data-title="Age">
+                  {{ sRMSE }}
+                </div>
+              </div>
+    
+        </div>
+
+
+        
+
+            <div class="table">
+    
+                <div class="row header green">
+                  <div class="cell">
+                    Multiple Linear Regression
+                  </div>
+                  <div class="cell"> 
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="cell" data-title="Name">
+                      R Sqaured
+                    </div>
+                    <div class="cell" data-title="Age">
+                        {{ lRSquared }}
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="cell" data-title="Name">
+                      Adjusted R Sqaured
+                    </div>
+                    <div class="cell" data-title="Age">
+                      {{ lAdjRSQuared }}
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="cell" data-title="Name">
+                      Mean Absolute Error
+                    </div>
+                    <div class="cell" data-title="Age">
+                      {{ lMAE }}
+                    </div>
+                  </div>
+              
+                  <div class="row">
+                      <div class="cell" data-title="Name">
+                        Mean Squared Error
+                      </div>
+                      <div class="cell" data-title="Age">
+                        {{ lMSE }}
+                      </div>
+                    </div>
+                  
+                    <div class="row">
+                        <div class="cell" data-title="Name">
+                           Root Mean Squared Error
+                        </div>
+                        <div class="cell" data-title="Age">
+                          {{ lRMSE }}
+                        </div>
+                      </div>
+            
+                </div>
+
+                
+
+      <div class="table">
+    
+          <div class="row header green">
+            <div class="cell">
+              XG Boost Regression
+            </div>
+            <div class="cell"> 
+              </div>
+          </div>
+          
+          <div class="row">
+              <div class="cell" data-title="Name">
+                R Sqaured
+              </div>
+              <div class="cell" data-title="Age">
+                  &#09; {{ xRSquared }}
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="cell" data-title="Name">
+                Adjusted R Sqaured
+              </div>
+              <div class="cell" data-title="Age">
+                  &#09;  {{ xAdjRSQuared }}
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="cell" data-title="Name">
+                Mean Absolute Error
+              </div>
+              <div class="cell" data-title="Age">
+                  &#09;  {{ xMAE }}
+              </div>
+            </div>
+        
+            <div class="row">
+                <div class="cell" data-title="Name">
+                  Mean Squared Error
+                </div>
+                <div class="cell" data-title="Age">
+                    &#09;  {{ xMSE }}
+                </div>
+              </div>
+            
+              <div class="row">
+                  <div class="cell" data-title="Name">
+                     Root Mean Squared Error
+                  </div>
+                  <div class="cell" data-title="Age">
+                    &#09; {{ xRMSE }}
+                  </div>
+                </div>
+      
+          </div>
+  
+
+            
+
+           
+              
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>

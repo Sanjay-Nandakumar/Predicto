@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Predicto</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		{% load static %}  
+		<link href="{% static 'assets/css/font-awesome.min.css'%}" rel="stylesheet">  
+		<link href="{% static 'assets/css/main.css'%}" rel="stylesheet">  
+
+	</head>
+
+
+
+	<body class="landing">
+		
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1><strong><a href="">Predicto</a></strong></h1>
+				<nav id="nav">
+				</nav>
+			</header>
+			
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				
+		
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2>Predicto</h2>
+				<p>Complete your Data analysis and Modelling process of your ML project in just one click !!!</p>
+				
+	
+			
+	
+				<img src="	{% static 'images/pic02.jpg' %}" alt="" /> 
+				<form  action= {% url 'outputeda' %}  method="POST" >
+						{% csrf_token %} 
+					<a href="{% url 'profile' %}">
+					<div style="color:powderblue;"> Click here to upload your data in csv format </div> 
+					<input class="button special big" value= "eda" type="submit" id="toggle1" />
+					</a>
+				</form>
+		
+	
+				<br><br><br><br><br><br>
+
+				<img src="	{% static 'images/pic03.jpg' %}" alt="" /> 
+				
+				<form  action= {% url 'outputmodelreg' %}  method="POST" >
+						{% csrf_token %} 
+					<input style="background-color:powderblue;" type="text" name="targetname" placeholder= "Enter the name of target variable" required maxlength="50" id="id_targetname" />
+					<br> 
+					<div style="color:powderblue;"> Click here to upload your data in csv format </div> 
+					<input class="button special big" value= "Regression" type="submit" id="toggle1" />
+				</form>
+
+        <br><br><br><br><br><br>
+				
+				<img src="	{% static 'images/pic02.jpg' %}" alt="" /> 
+				
+				<form  action= {% url 'outputmodelclass' %}  method="POST" >
+						{% csrf_token %} 
+					<input style="background-color:powderblue;" type="text" name="targetname" placeholder= "Enter the name of target variable" required maxlength="50" id="id_targetname" />
+					<br> 
+					<div style="color:powderblue;"> Ckick here to upload your data in csv format </div> 
+					<input class="button special big" value= "Binary classification" type="submit" id="toggle1" />
+				</form>
+			
+		</section>
+			
+
+			
+			<!-- One -->
+				<section id="one" class="wrapper style1">
+					
+					<div class="container 75%">
+						<div class="row 200%">
+						
+							<div class="6u 12u$(medium)">
+								<header class="major">
+									<h2>Libraries</h2>
+				
+								</header>
+							</div>
+							<div class="6u$ 12u$(medium)">
+									<h2>Pandas Profiling</h2>
+									<p>Panadas profiling is a special libary which profile reports from a pandas DataFrame. The pandas df.describe() function is great but a little basic for serious exploratory data analysis. pandas_profiling extends the pandas DataFrame with df.profile_report() for quick data analysis.</p>
+										<p>
+											For each column the following statistics - if relevant for the column type - are presented in an interactive HTML report:
+										</p>
+										<p>
+											Type inference: detect the types of columns in a dataframe.
+											<ul>
+											<li>Essentials: type, unique values, missing values </li>
+											<li>Quantile statistics like minimum value, Q1, median, Q3, maximum, range, interquartile range</li>
+											<li>Descriptive statistics like mean, mode, standard deviation, sum, median absolute deviation, coefficient of variation, kurtosis, skewness</li>
+											<li>Most frequent values</li>
+											<li>Histogram</li>
+											<li>Correlations highlighting of highly correlated variables, Spearman, Pearson and Kendall matrices</li>
+											<li>Missing values matrix, count, heatmap and dendrogram of missing values</li>
+											<li>Text analysis learn about categories (Uppercase, Space), scripts (Latin, Cyrillic) and blocks (ASCII) of text data.</li>
+											<li>File and Image analysis extract file sizes, creation dates and dimensions and scan for truncated images or those containing EXIF information.</li>
+										</ul>
+									</p>
+                                    <h2>SCIKIT LEARN</h2>
+									<p>Scikit-learn (formerly scikits.learn and also known as sklearn) is a free software machine learning library for the Python programming language.IIt features various classification, regression and clustering algorithms including support vector machines, random forests, gradient boosting, k-means and DBSCAN, and is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<body>  
+			
+	<!-- Four -->
+	<section id="four" class="wrapper style3 special">
+		<div class="container">
+			<header class="major">
+				<h2>DONT KNOW HOW TO USE ?</h2>
+			</header>
+			<ul class="actions">
+				<li><a href="https://github.com/Sanjay-Nandakumar/Predicto" data-lightbox="image" class="button special big" target="_blank">Proceed to github for installation</a></li>
+			</ul>
+		</div>
+	</section>
+	
+			<!-- Three -->
+				<section id="three" class="wrapper style1">
+					<div class="container">
+						<header class="">
+							<h2>ABOUT ME</h2>
+						</header>
+						<p>Hey there, I’m Sanjay. This is a simple machine learning - django integrated web application created for learning purpose. The front end is entirely created using python django scripts and some basic models in regression and classification are invoked from scikit learn library.The application is hosted in cloud via Amazon Web Services (AWS).</p>
+						<div class="feature-grid">
+							<div class="feature">
+								<div class="image rounded"> <img src="	{% static 'images/quora.png' %}"  alt="" /> </div>
+								<div class="content">
+					
+									 <a href="https://www.quora.com/profile/Sanjay-Kumar-563?q=sanjay%20kumar" target="_blank">Click here for navigate to my quora Q & A s</a> 
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"> <img src="	{% static 'images/medium.png' %}"  alt="" /> </div>
+								<div class="content">
+										<a href="https://medium.com/@sanjayjsw05" target="_blank">Click here for navigate to my medium articles</a> 
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"> <img src="	{% static 'images/blog.jpg' %}"  alt="" /> </div>
+								<div class="content">
+										<a href="https://mathfables.blogspot.com/" target="_blank">Click here for navigate to my personal blog</a> 
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"> <img src="	{% static 'images/linkedin.png' %}"  alt="" /> </div>
+								<div class="content">
+									<a href="https://www.linkedin.com/in/sanjay-nandakumar-8278229b/" target="_blank">Click here for navigate to my linkedin profile</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+		
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://www.facebook.com/profile.php?id=100004523052310" target="_blank" class="icon fa-facebook"></a></li>
+						<li><a href="https://twitter.com/SanjayNK_tweet" target="_blank" class="icon fa-twitter"></a></li>
+						<li><a href="https://www.instagram.com/sanjay.nandakumar/" target="_blank" class="icon fa-instagram"></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src= "{% static 'assets/js/jquery.min.js' %}" ></script>
+			<script src= "{% static 'assets/js/util.js'%}"></script>
+			<script src= "{% static 'assets/js/main.js'%}"></script>
+
+	</body>
+</html>
