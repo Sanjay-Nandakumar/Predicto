@@ -1,5 +1,5 @@
 # Predicto
-Predicto is a machine learning project which provides the service of predictive modelling and exploratory data analysis on just one click. The front end is built using Django and the back end has been fed with various ML learning libraries.
+**Predicto is a machine learning project which provides the service of predictive modelling and exploratory data analysis on just one click. The front end is built using Django and the back end has been fed with various ML learning libraries.**
 
 [![Predicto.png](https://i.postimg.cc/HkWmqwmn/Predicto.png)](https://postimg.cc/mtnKMFtW)
 
